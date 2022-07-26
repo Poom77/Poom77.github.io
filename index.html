@@ -11,11 +11,28 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: courier;
+      }
+      h1, h2 {
+        color: grey ;
+        font-family: courier;
+      }
+      .light-mode {
+        background-color: white;
+        color: black;
+        font-family: courier;
+        
+      }
+    </style>
   </head>
   <body >
     <div class="wrapper">
       <header>
-        <h1 style="font-family:courier;"  style="text-align:center;">Chawit "Poom" Kritpracha</h1>
+        <h1   style="text-align:left;">Chawit "Poom" Kritpracha</h1>
         <!--<p>Undergraduate Student</p>-->
         <img src="img/peeposmile.jpeg">
         <p class="view" style="text-align:center;" style="font-family:courier;"><a href="./pdf/cv.pdf" target="_blank">CV <small>Updated July 22 2022</small></a></p>
@@ -38,7 +55,7 @@
           and <a href="https://cpuelz.github.io" target="_blank">Dr. Charles Puelz</a>.
           I have a general interest in dynamical systems, computational physiology, and numerical linear algebra.</p>
 
-        <h2 style="font-family:courier;">TBD</h2>
+        <h2 style="font-family:courier;">Projets</h2>
 
         <p style="font-family:courier;">tbd</p>
 
@@ -48,6 +65,21 @@
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
+    <button type="button" id="toggle" onclick="darklight()">Light Mode</button>
+    <script>
+      function darklight() {
+        var element = document.body;
+        element.classList.toggle("light-mode");
+        var change = document.getElementById("toggle");
+                if (change.innerHTML == "Light Mode")
+                {
+                    change.innerHTML = "Dark Mode";
+                }
+                else {
+                    change.innerHTML = "Light Mode";
+                }
+      }
+    </script>
     <script src="javascripts/scale.fix.js"></script>
   </body>
 </html>
